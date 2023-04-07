@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ver.10 -->
+
+<head>
+  <title>Terence Zhu - Leviajian | Illustrator and Storyboarder | Illustration work</title>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2M71VEQ9R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2M71VEQ9R0');
+</script>
+  <meta name="description"
+    content="When writing a meta description, keep it between 140 and 160 characters so Google can display your entire message. Don’t forget to include your keyword!">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="screenshot.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script src="https://kit.fontawesome.com/d300c2ea15.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <section class="hero parallax">
+    <header class="top-hero-header"></header>
+    <header class="hero-header">
+      <ul class="branding-navigation">
+        <li><a href="index.html#work" class="custom-navigation">Work</a></li>
+        <li class="logo"><a href="index.html"><img src="Nememantis_logo_Nememantis_logo-B9.png" /></a></li>
+        <li><a href="about.html" class="custom-navigation">About</a></li>
+      </ul>
+    </header>
+    <div class="hero-headline-wrapper">
+      <h1 class="hero-headline">Illustration</h1>
+      <figure class="toggleGhost hero-icon" id="btnGhost value=" Hide Ghost" onclick="ShowHideDiv(this)" />Ψ(｀▽´)Ψ
+      </figure>
+    </div>
+    <footer class="hero-footer">
+      <ul class="hero-footer-navigation">
+        <li><a href="#" class="custom-navigation">Instagram</a></li>
+        <li><a href="mailto:terencezhu88@gmail.com" class="custom-navigation">Email</a></li>
+      </ul>
+    </footer>
+  </section>
+  <section class="work-navigation-section" id="work">
+    <ul class="work-navigation-buttons">
+      <li><a href="#" class="work-navigation-button custom-navigation">Illustration</a></li>
+      <li><a href="#" class="work-navigation-button custom-navigation">Painting</a></li>
+      <li><a href="#" class="work-navigation-button custom-navigation">Play</a></li>
+      <li><a href="#" class="work-navigation-button custom-navigation">Design</a></li>
+      <li><a href="storyboards.html" class="work-navigation-button">Storyboards</a></li>
+      <li><a href="animation.html" class="work-navigation-button">Animation</a></li>
+      <li><a href="photography.html" class="work-navigation-button">Photography</a></li>
+    </ul>
+  </section>
+  <main class="work-wrapper">
+    <section class="portfolio">
+      <ul class="grid">
+        <li class="work-page-grid-item">
+          <a href="project-1.html">
+            <figure>
+              <img src="thumbnail5.png" alt="Environment">
+            </figure>
+          </a>
+        </li>
+        <li class="work-page-grid-item">
+          <a href="project-2.html">
+            <figure>
+              <img src="thumbnail1.png" alt="OCportrait">
+            </figure>
+          </a>
+        </li>
+        <li class="work-page-grid-item"><a href="project-1.html">
+            <figure>
+              <img src="thumbnail4.png" alt="Conceptdevelopment">
+            </figure>
+          </a>
+        </li>
+        <li class="work-page-grid-item"><a href="project-1.html">
+            <figure>
+              <img src="Thumbnail6.png" alt="photography">
+            </figure>
+          </a>
+        </li>
+        <li class="work-page-grid-item"><a href="project-1.html">
+            <figure>
+              <img src="Thumbnail7.png" alt="animated">
+            </figure>
+          </a>
+        </li>
+        <li class="work-page-grid-item"><a href="project-1.html">
+            <figure>
+              <img src="Thumbnail8.png" alt="Paintings">
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <ul class="global-footer">
+    <li class="footer-item-1">
+      <h2>What are you looking at?</h2>
+      <p>A portfolio website of Terence Zhu or as he calls himself "Nememantis" <a href="javascript:void(0)"
+          class="toggleGhost colored-link" id="btnGhost value=" Hide Ghost" onclick="ShowHideDiv(this)">making something
+          randomly fly across the screen</a>, playing with animated gradients, animated GIFs, or even super crisp SVGs.
+      </p>
+    </li>
+    <li class="footer-item-2">
+      <h2>Awards &amp; Recognition</h2>
+      <ul class="awards-list">
+        <li class="award-item"><a href="#">Missing</a></li>
+      </ul>
+    </li>
+    <li class="footer-item-3">
+      <h2>Contact &amp; Social</h2>
+      <ul class="socials-list">
+        <li class="social-item"><a href="#">Insta</a></li>
+        <li class="social-item"><a href="#">LinkedIn</a></li>
+        <li class="social-item"><a href="#">Behance</a></li>
+      </ul>
+    </li>
+    <li class="footer-item-4">
+      <p><a href="#top">Smooth scroll to the top</a></p>
+      <p>&copy; 2022. Made with ❤ and CSS Grid by James Neufeld.</p>
+    </li>
+  </ul>
+
+  <div id="myID" class="bottomMenu hide"><a href="#">Back to top</a></div>
+
+  <div id="ghostanimation" class="ghost"><img src="cactus.svg" /></div>
+  <script type="text/javascript">
+    function ShowHideDiv(btnGhost) {
+      var GhostStyle = document.getElementById("ghostanimation");
+      if (btnGhost.value == "Hide Ghost") {
+        GhostStyle.style.display = "none";
+        btnGhost.value = "Play Ghost";
+      } else {
+        GhostStyle.style.display = "block";
+        btnGhost.value = "Hide Ghost";
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    myID = document.getElementById("myID");
+
+    var myScrollFunc = function () {
+      var y = window.scrollY;
+      if (y >= 800) {
+        myID.className = "bottomMenu show"
+      } else {
+        myID.className = "bottomMenu hide"
+      }
+    };
+
+    window.addEventListener("scroll", myScrollFunc);
+  </script>
+
+</body>
+
+</html>

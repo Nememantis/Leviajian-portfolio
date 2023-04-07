@@ -1,0 +1,625 @@
+/* Add the Google Fonts you want, remove the ones you don't. 
+
+███████  ██████  ███    ██ ████████ ███████ 
+██      ██    ██ ████   ██    ██    ██      
+█████   ██    ██ ██ ██  ██    ██    ███████ 
+██      ██    ██ ██  ██ ██    ██         ██ 
+██       ██████  ██   ████    ██    ███████ 
+
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Hepta+Slab|Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('make-something-fly.css');
+@import url('scroll-to-top.css');
+/*
+
+X-Small devices (portrait phones, less than 576px) 
+No media query for `xs` since this is the default in Bootstrap 
+
+███    ███  ██████  ██████  ██ ██      ███████     ███████ ██ ██████  ███████ ████████ 
+████  ████ ██    ██ ██   ██ ██ ██      ██          ██      ██ ██   ██ ██         ██    
+██ ████ ██ ██    ██ ██████  ██ ██      █████       █████   ██ ██████  ███████    ██    
+██  ██  ██ ██    ██ ██   ██ ██ ██      ██          ██      ██ ██   ██      ██    ██    
+██      ██  ██████  ██████  ██ ███████ ███████     ██      ██ ██   ██ ███████    ██    
+                                                                                       
+*/
+
+/* Add Border Box and Smooth Scroll */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* cursor: url("up.png"), auto !important; */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Use variable for to easily change your theme's colour scheme and typography.
+
+██    ██  █████  ██████  ██  █████  ██████  ██      ███████ ███████ 
+██    ██ ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██      ██      
+██    ██ ███████ ██████  ██ ███████ ██████  ██      █████   ███████ 
+ ██  ██  ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██           ██ 
+  ████   ██   ██ ██   ██ ██ ██   ██ ██████  ███████ ███████ ███████ 
+                                                                    
+*/
+
+:root {
+  --primary-text-color: #252525;
+  --accent-color: #bafffb;
+  --hyperlink-color: #EAE4FF;
+  --hyperlink-alternate-color: #EAE4FF;
+  --hover-color: #00c0a3;
+  --body-typeface: "Inter", sans-serif;
+  --heading-typeface: "Staatliches", cursive;
+  --background-color: #394141;
+  --alt-background-color: #96eee1;
+  --text-selection-background-color: #555;
+  --base-color: #96eee10;
+}
+
+
+body {
+  font-family: var(--body-typeface);
+  color: var(--primary-text-color);
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+::selection {
+  background: #00c0a3;
+}
+
+/* Making all images responsive */
+img,iframe {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+  /* Removes the gap/space in inline elements for text descenders. */
+  object-fit: contain;
+  /* This is optional. Also try cover or leave out entirely. */
+
+}
+
+.video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Global & Mobile Typography 
+
+████████ ██    ██ ██████   ██████   ██████  ██████   █████  ██████  ██   ██ ██    ██ 
+   ██     ██  ██  ██   ██ ██    ██ ██       ██   ██ ██   ██ ██   ██ ██   ██  ██  ██  
+   ██      ████   ██████  ██    ██ ██   ███ ██████  ███████ ██████  ███████   ████   
+   ██       ██    ██      ██    ██ ██    ██ ██   ██ ██   ██ ██      ██   ██    ██    
+   ██       ██    ██       ██████   ██████  ██   ██ ██   ██ ██      ██   ██    ██    
+                                                                                     
+*/
+
+h1 {
+  font-size: 2rem;
+  font-family: var(--heading-typeface);
+  margin-bottom: 1rem;
+  color: var(--baby-powder);
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-family: var(--heading-typeface);
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+h3 {
+  font-size: 1.325rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+/* Hyperlink Styles */
+a {
+  text-decoration: none;
+  color: var(--hyperlink-color);
+}
+
+a:hover {
+  color: var(--hover-color);
+
+}
+
+a:active {
+  color: var(--hover-color);
+  /* Tap on mobile */
+}
+
+.navigation-arrow {
+  color: var(--alt-background-color);
+}
+
+.navigation-arrow:link {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #555555;
+  color: transparent;
+}
+
+.navigation-arrow:active,
+.navigation-arrow:hover {
+  color: var(--accent-color);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--accent-color);
+}
+
+.colored-link {
+  color: var(--hyperlink-alternate-color);
+}
+.custom-navigation {
+  color: white;
+}
+
+.custom-navigation:hover {
+  background: url(heading-background.svg);
+  background-size: 15%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: var(--accent-color);
+}
+
+
+p {
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.project-title { font-size: 3.225rem;}
+.project-category {font-size: 1.5rem; text-transform: uppercase;}
+.project-description {font-size: 1.275rem; line-height: 1.3em;}
+
+
+
+
+/* Work Page Layout
+
+██     ██  ██████  ██████  ██   ██     ██████   █████   ██████  ███████ 
+██     ██ ██    ██ ██   ██ ██  ██      ██   ██ ██   ██ ██       ██      
+██  █  ██ ██    ██ ██████  █████       ██████  ███████ ██   ███ █████   
+██ ███ ██ ██    ██ ██   ██ ██  ██      ██      ██   ██ ██    ██ ██      
+ ███ ███   ██████  ██   ██ ██   ██     ██      ██   ██  ██████  ███████ 
+
+*/
+
+.work-wrapper {
+  flex: 1;
+}
+
+.work-navigation-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 3 0vh; 
+}
+
+.work-navigation-buttons { padding: 1rem; width: 70%; display: flex; flex-wrap: wrap;}
+
+
+.work-navigation-button {border: 1px solid white; padding: .5rem 1rem; border-radius: .8rem; display: inline-block; margin-right: .5rem; margin-bottom: .5rem; }
+
+
+
+
+/* Padding around work grid and project page */
+.portfolio,
+.project-wrapper {
+  padding: .25rem
+}
+
+/* Defining the work page grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
+}
+
+
+
+
+/* Optional – Sizing the work page images */
+figure {
+  max-height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* Hero 
+
+██   ██ ███████ ██████   ██████  
+██   ██ ██      ██   ██ ██    ██ 
+███████ █████   ██████  ██    ██ 
+██   ██ ██      ██   ██ ██    ██ 
+██   ██ ███████ ██   ██  ██████  
+                                 
+*/
+
+.hero {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-hero-header {  background-color:#ff9626; min-height: 3rem;}
+
+.branding-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+.logo {
+  width: 8rem;
+  background-color:#ff9626;
+  border-radius: 50%;
+  padding: 1rem;
+  margin-top: -5rem;  
+}
+
+.hero-headline-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 100vh;
+  height: inherit;
+  object-fit: cover; 
+}
+
+.hero-icon {
+  font-size: 4rem;
+}
+
+.hero-footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+  color: #ff9626;
+}
+
+.hero-footer-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* This part isn't required */
+
+.projects {
+  background: #111;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Backgrounds */
+
+.wenwu {background: url(project-images/wenwu/terence-zhu-nememantis-photography-custom-figures-marvel-legend-wenwu-ironman-ten-rings-toy-shang-chi-marvel-tony-stark-1.jpg); }
+.dragonmech {background: url(project-images/dragonmech/terence_zhu_illustration_character_design_dragon_mecha_robot_personal_project__based_on_silhouettes_ink_splatter_design_exploration_inspired_by_mecha_old_school_anime_giant_robots_and_giant_dragons.jpg); }
+/* .dimensional-dragon-accent {background: #5d102c;}  */
+.shang-ping  {background: url(Thumbnail8.png); }
+.crevass {background: url(project-images/crevass/terence_zhu_nememantis_illustration_crevass-town-environment-landscape-concept-train-railroad-system-art-photoshop-1.jpg); }
+.abanbot {background: url(project-images/abanbot/terence-zhu-nememantis-illustration-animation-ready-landscape-concept-piece-atomhawk-brief-inspired-keyword-abandoned-fantasy-architectual-conceptual-art-gigantic-robot-town-photoshop-1.jpg); }
+.dinoglitch {background: url(project-images/dinoglitch/terence-zhu-nememantis-illustration-animation-storyboard-animatic-dino-glitch-dinoglitch-dinosaur-apocalypse-survival-story-jurrasic-horizon-zero-dawn-video-storytelling-suspense-mentored-project-sketchbook-pro-after-effects-1.jpg); }
+.ichigata {background: url(project-images/Ichigata/terence-zhu-illustration-vector-animation-fanart-kamen-rider-ichigata-zero-one-henshin-force-riser-masked-rider-tokusatsu-personal-project-idea-challenge-art-video-illustrator-after-effects-1.jpg); }
+.griffthrine {background: url(project-images/Griffthrine/terence-zhu--griffthrine--personal-portrait-illustration-stylized-in-league-of-legends-arcane-style.jpg); }
+.gladiator {background: url(project-images/gladiator/terence-zhu-nememantis-illustration-portrait-concept-piece-gladiator-versus-future-space-man-spaceman-fighting-arena-action-thrilled-artwork-dynamic-lighting-1.jpg); }
+.untitled {background: url(project-images/wenwu/terence-zhu-nememantis-photography-custom-figures-marvel-legend-wenwu-ironman-ten-rings-toy-shang-chi-marvel-tony-stark-1.jpg); }
+
+/* The Essential CSS parallax for mobile (desktop code is at the bottom under media queries) */
+
+
+#parallax {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center center, center left, center center;
+  background-size: 100%, 100%, 110%;
+}
+
+
+/* Global Footer
+
+███████  ██████   ██████  ████████ ███████ ██████  
+██      ██    ██ ██    ██    ██    ██      ██   ██ 
+█████   ██    ██ ██    ██    ██    █████   ██████  
+██      ██    ██ ██    ██    ██    ██      ██   ██ 
+██       ██████   ██████     ██    ███████ ██   ██ 
+                                                   
+*/
+
+
+
+
+.global-footer,
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  min-height: 50vh;
+  background: #FF8A00;
+  padding: 1rem 1rem;
+}
+
+.footer-item-1,
+.about-item-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.footer-item-2,
+.about-item-2 {
+  text-align:center;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.footer-item-3,
+.about-item-3 {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.footer-item-4,
+.about-item-4 {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+
+/* Project Page 
+
+██████  ██████   ██████       ██ ███████  ██████ ████████     ██████   █████   ██████  ███████ 
+██   ██ ██   ██ ██    ██      ██ ██      ██         ██        ██   ██ ██   ██ ██       ██      
+██████  ██████  ██    ██      ██ █████   ██         ██        ██████  ███████ ██   ███ █████   
+██      ██   ██ ██    ██ ██   ██ ██      ██         ██        ██      ██   ██ ██    ██ ██      
+██      ██   ██  ██████   █████  ███████  ██████    ██        ██      ██   ██  ██████  ███████ 
+                                                                                               
+*/
+
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+/* Sidebar */
+.project-aside {
+  width: 100%;
+  color: white;
+
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-navigation {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: flex-end;
+  margin-bottom: 1rem; 
+}
+
+.arrow {
+  padding-right: 1rem;
+}
+
+.project-image {
+  font-size: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  font-size: 14rem;
+}
+
+
+/* Main Project Image Area */
+.project-details {
+  width: 100%;
+  padding: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+ ██████  ███    ███ ███████ ██████   █████  
+██    ██ ████  ████ ██      ██   ██ ██   ██ 
+██ ██ ██ ██ ████ ██ █████   ██   ██ ███████ 
+██ ██ ██ ██  ██  ██ ██      ██   ██ ██   ██ 
+ █ ████  ██      ██ ███████ ██████  ██   ██ 
+                                            
+                                           
+*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .mobile-hero-image {
+    width: 100%;
+    max-height: 100vh;
+    height: inherit;
+    object-fit: cover; 
+    background: url(images/parallax-brawl-mobile-flat.jpg);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+
+  h1 {
+    font-size: 4.275rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.625rem;
+  }
+
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-headline-wrapper {
+    padding: 4rem 8rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem;
+  }
+
+  /* Grayscale filter with full-colour on hover and tap */
+  .work-page-grid-item a img {
+    filter: grayscale(100);
+  }
+
+  .work-page-grid-item>a:hover img,
+  .work-page-grid-item>a:active img {
+    filter: grayscale(0);
+  }
+
+
+  .global-footer,
+  .about {
+    padding: 4rem 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer-item-1,
+  .about-item-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .footer-item-2,
+  .about-item-2 {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+
+  .footer-item-3,
+  .about-item-3 {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+  }
+
+  .footer-item-4,
+  .about-item-4 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    text-align: center;
+    align-self: end;
+  }
+
+  /* Padding around work grid and project page */
+  .portfolio,
+  .project-wrapper {
+    padding: .5rem
+  }
+
+  /* Project Page Flex Direction on Large Devices */
+  .project-wrapper {
+    flex-direction: row-reverse;
+
+  }
+
+
+  /* Sidebar on Large Devices */
+  .project-aside {
+    width: 35%;
+    height: 50vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5vh;
+  }
+
+
+  /* Main Project Image Area on Large Devices */
+  .project-details {
+    width: 65%;
+  }
+
+  #parallax {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-15.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-14.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-13.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-12.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-11.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-10.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-09.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-08.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-07.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-06.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-05.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-04.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-03.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-02.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center, center left, center center;
+    background-size: 100%, 100%, 110%;
+  }
+
+
+}
+
+
+
+  /* X-Large devices (large desktops, 1200px and up)*/
+  @media (min-width: 1200px) {}
+
+  /* XX-Large devices (larger desktops, 1400px and up) */
+  @media (min-width: 1400px) {}
